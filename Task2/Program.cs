@@ -4,12 +4,13 @@ int[,] CreateFillArray()
 {
     Console.WriteLine("Введите количество строк и столбцов в таблице (ввод числа через enter): ");
     int[,] arr = new int[Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine())];
+    Console.WriteLine();
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
             arr[i, j] = Random.Shared.Next(100);
-            Console.Write($"|{arr[i, j]}| ");
+            Console.Write($"|{arr[i, j], 3} | ");
         }
         Console.WriteLine();
     }
